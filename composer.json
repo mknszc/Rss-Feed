@@ -1,0 +1,20 @@
+{
+    "name": "mknszc/rss-feed",
+    "description": "Rss source for different companies",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Özcan Çamoğlu",
+            "email": "ozcan.camoglu@gmail.com"
+        }
+    ],
+    "require" : {
+        "php" : ">=7.1"
+    }
+}
