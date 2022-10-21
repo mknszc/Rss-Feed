@@ -12,6 +12,7 @@ class Feed implements FeedInterface
 	public function addChannel($channel)
 	{
 		$this->channels[] = $channel;
+        
 		return $this;
 	}
 	
@@ -19,7 +20,7 @@ class Feed implements FeedInterface
 	{
 		$xml = new \XMLWriter();
 		$xml->openMemory();
-		$xml->startDocument($this->xmlVersion,$this->encoding);
+		$xml->startDocument($this->xmlVersion, $this->encoding);
 		$xml->startElement('rss');
 		$xml->writeAttribute('version', $this->rssVersion);
 		$xml->writeAttribute('xmlns:atom', 'https://www.w3.org/2005/Atom');
@@ -31,6 +32,7 @@ class Feed implements FeedInterface
 		$xml->endElement();
 		
 		$xml->endDocument();
+        
 		return $xml->outputMemory();
 	}
 }
