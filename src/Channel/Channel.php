@@ -17,7 +17,7 @@ class Channel implements Channelnterface
 	
 	public function title($title)
 	{
-		$this->title =$title;
+		$this->title = $title;
 		
 		return $this;
 	}
