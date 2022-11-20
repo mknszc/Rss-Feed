@@ -17,7 +17,7 @@ $channel->title("Cimri")
 $data = new JsonReader();
 $products = $data->read('data/products.json');
 
-foreach($products as $key => $product) {
+foreach ($products as $key => $product) {
 	$item = new Item();
 	$item->name($product->name)
 		->price($product->price)

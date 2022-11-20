@@ -96,6 +96,7 @@ class Item implements ItemInterface
 		}
 		
 		$xml->endElement();
+
 		return $xml->outputMemory();
 	}
 }
