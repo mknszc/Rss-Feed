@@ -12,18 +12,18 @@ $feed = new Feed();
 
 $channel = new Channel();
 $channel->title("Cimri")
-	->description("Product list for Cimri");
+    ->description("Product list for Cimri");
 
 $data = new JsonReader();
 $products = $data->read('data/products.json');
 
 foreach ($products as $key => $product) {
-	$item = new Item();
-	$item->name($product->name)
-		->price($product->price)
-		->category($product->category);
-	
-	$channel->addItem($item);
+    $item = new Item();
+    $item->name($product->name)
+        ->price($product->price)
+        ->category($product->category);
+    
+    $channel->addItem($item);
 }
 
 $feed->addChannel($channel);

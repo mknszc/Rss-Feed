@@ -4,7 +4,7 @@ namespace Src\Feed;
 
 interface FeedInterface
 {
-	public function addChannel($channel);
+    public function addChannel($channel);
 
-	public function toXml();
+    public function toXml();
 }
