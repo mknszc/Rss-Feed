@@ -8,13 +8,14 @@ class Feed implements FeedInterface
     protected $xmlVersion = '1.0';
     protected $encoding = 'UTF-8';
     protected $rssVersion = '2.0';
-    
+
     public function addChannel($channel)
     {
         $this->channels[] = $channel;
+        
         return $this;
     }
-    
+
     public function toXml()
     {
         $xml = new \XMLWriter();
@@ -29,7 +30,7 @@ class Feed implements FeedInterface
             }
         }
         $xml->endElement();
-        
+
         $xml->endDocument();
 
         return $xml->outputMemory();
